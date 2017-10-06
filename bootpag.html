@@ -1,0 +1,25 @@
+<p id="content">Dynamic page content</p>
+<p id="pagination-here"></p>
+
+<script>
+	$('#pagination-here').bootpag({
+    total: 7,          // total pages
+    page: 1,            // default page
+    maxVisible: 5,     // visible pagination
+    leaps: true         // next/prev leaps through maxVisible
+}).on("page", function(event, num){
+    $("#content").html("Page " + num); // or some ajax content loading...
+    // ... after content load -> change total to 10
+    $(this).bootpag({total: 10, maxVisible: 10});
+});
+</script>
+
+<script type="text/javascript">
+	$('.demo2').bootpag({
+		total: 23,
+		page: 3,
+		maxVisible: 10
+	}).on('page', function(event, num){
+        $(".content2").html("Page " + num); // or some ajax content loading...
+    });
+</script>
