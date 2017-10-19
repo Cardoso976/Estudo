@@ -4,7 +4,7 @@
 	});
 
 	$("#registro").click(function(){
-		$("#login").modal('hide');				
+		//$("#login").modal('hide');				
 		$("#registrar").show();				
 	});
 
