@@ -1,5 +1,6 @@
 $(function(){
 	$(".botao-remover").click(removeLinha);
+	$("#botao-placar").click(mostraPlacar);
 });
 function inserePlacar(){
 	var corpoTabela = $(".placar").find("tbody");
@@ -34,4 +35,8 @@ function novaLinha(usuario, numPalavras){
 function removeLinha(){
 	event.preventDefault();
 	$(this).parent().parent().remove();
+}
+
+function mostraPlacar(){
+	$(".placar").slideDown(2000);
 }
